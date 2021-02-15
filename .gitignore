@@ -2,4 +2,4 @@ lambda/node_modules
 .ask/
 ask-resources.json
 **/.DS_Store
-**/mnode_modules/
+**/node_modules/
