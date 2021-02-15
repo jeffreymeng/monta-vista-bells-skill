@@ -3,3 +3,4 @@ lambda/node_modules
 ask-resources.json
 **/.DS_Store
 **/node_modules/
+.idea/
