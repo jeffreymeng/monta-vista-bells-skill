@@ -1,0 +1,152 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "monta vista bells",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskAboutPeriodIntent",
+          "slots": [
+            {
+              "name": "period",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "{period} period"
+              ]
+            }
+          ],
+          "samples": [
+            "When {period} period is",
+            "When {period} is",
+            "When is {period}",
+            "What day is {period} period",
+            "When does {period} period end",
+            "When does {period} period start",
+            "What day is {period}",
+            "When\u0027s {period}",
+            "What time is {period} period",
+            "When is {period} period"
+          ]
+        },
+        {
+          "name": "NextPeriodIntent",
+          "slots": [],
+          "samples": [
+            "What\u0027s the next period",
+            "What\u0027s the next class",
+            "What the next class is",
+            " what the next period is",
+            "When the next class is",
+            "When the next period is",
+            "When does the next period today start",
+            "When does the next class today start",
+            "When is the next period today",
+            "When is the next class today",
+            "When\u0027s the next class",
+            "When\u0027s the next period",
+            "When does the next class start",
+            "What time is the next class",
+            "When is the next class",
+            "What time is the next period",
+            "When does the next period start",
+            "When is the next period"
+          ]
+        },
+        {
+          "name": "WhenIsLunchIntent",
+          "slots": [],
+          "samples": [
+            "When lunch is today",
+            "When lunch is",
+            "When is lunch",
+            "When\u0027s lunch",
+            "When is lunch break",
+            "What time is lunch today",
+            "When is lunch today"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AskAboutPeriodIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "period",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.713802519571.396819041223"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.1009235970455.161295010182.1011285432419",
+                  "values": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.713802519571.396819041223",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which period do you want to know about?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What period do you want me to tell you about?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1009235970455.161295010182.1011285432419",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I don\u0027t think Monta Vista has a {period} period. Which period would you like to know about?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "14"
+}
