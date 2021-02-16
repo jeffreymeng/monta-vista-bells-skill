@@ -1,7 +1,7 @@
 # Monta Vista Bells Alexa Skill
 A simple Alexa skill created for fun. All it does right now is tell you when a period is, and when lunch is.
 
-View on the alexa skill store: 
+[View this skill on the alexa skills store](https://smile.amazon.com/gp/product/B08WPRCSXS?ie=UTF8&path=%2Fgp%2Fproduct%2FB08WPRCSXS&ref_=skillrw_dsk_si_dp&useRedirectOnSuccess=1&).
 
 (This skill was set up using the alexa skills kit (ASK) CLI, and this repo is simply a second origin for pushing. Changes on my local machine are automatically deployed because my local machine pushes to the Alexa hosted codeCommit bucket as well as this git repo.)
 
